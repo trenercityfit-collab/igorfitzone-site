@@ -1,0 +1,20 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Igor FitZone — Admin</title>
+<link rel="stylesheet" href="theme-dark.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head><body class="dark">
+<header class="admin-header">
+  <div class="brand"><div class="logo">IC</div><div><strong>Igor FitZone — Admin</strong><div class="sub">Привет, Игорь 👋 | тренер & нутрициолог</div></div></div>
+  <button id="backupBtn" class="btn">🪄 Создать резервную копию</button>
+</header>
+<script>
+document.getElementById('backupBtn').addEventListener('click', async()=>{
+  try{await fetch('https://hook.eu2.make.com/ia83okvtkus5ddgpuay3t772lvrn2dyk',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'backup-request', when:new Date().toISOString(), note:'manual-snapshot-from-admin'})});
+    alert('Запрошен snapshot-бэкап. Проверьте Make/Sheets.');
+  }catch(e){ alert('Не удалось отправить запрос на бэкап.'); }
+});
+CMS.init({ config: { load_config_file: true, path: 'config.yml' } });
+</script>
+</body></html>

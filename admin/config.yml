@@ -1,0 +1,38 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://www.igorfitzone.com
+display_url: https://www.igorfitzone.com
+logo_url: /assets/logo.svg
+locale: ru
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "settings"
+    label: "⚙️ Настройки сайта"
+    files:
+      - file: "assets/settings.json"
+        label: "Глобальные настройки"
+        name: "globals"
+        fields:
+          - {label: "PayPal Client ID", name: "paypal_client_id", widget: "string", default: "Af7s4XmMDf4ZgqXdRtJRvTFEmZNLAn6cafmbz6wYHjLDh8eoo2IuvkwA_uMtC_j7DsIFsn99mJKDcJUI"}
+          - {label: "Make Webhook URL", name: "make_webhook", widget: "string", default: "https://hook.eu2.make.com/ia83okvtkus5ddgpuay3t772lvrn2dyk"}
+          - {label: "Google Analytics ID", name: "ga_id", widget: "string", default: "G-KJNZSMGH2D"}
+          - {label: "Ключевые слова (SEO)", name: "keywords", widget: "text", default: "фитнес тренер Варшава, персональные тренировки, нутрициолог, снижение веса, набор массы, тренировки для мужчин, CityFit Warsaw"}
+          - {label: "OG-изображение", name: "og_image", widget: "image", default: "/assets/logo.svg"}
+
+  - name: "partners"
+    label: "🤝 Партнёрские блоки"
+    file: "assets/partners.json"
+    fields:
+      - label: "Рекомендации"
+        name: "partners"
+        widget: "list"
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Ссылка", name: "url", widget: "string"}
+          - {label: "Баннер", name: "image", widget: "image"}

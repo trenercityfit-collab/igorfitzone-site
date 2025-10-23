@@ -1,0 +1,9 @@
+.dark{--bg:#0e0f14;--panel:#141923;--text:#eaeaea;--muted:#9aa3b2;--gold:#d4af37;--gold2:#b9962e}
+body.dark{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+.admin-header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:linear-gradient(180deg,rgba(10,12,16,.96),rgba(10,12,16,.7));border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(145deg,var(--gold),var(--gold2));display:grid;place-items:center;color:#0c0f15;font-weight:800}
+.brand{display:flex;gap:12px;align-items:center}
+.sub{color:var(--muted);font-size:12px}
+.btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));color:#fff;cursor:pointer}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -8px rgba(212,175,55,.35)}
+.nc-appHeader,.nc-page-root .nc-appHeader{background:transparent!important;border:none!important}
