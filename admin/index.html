@@ -1,20 +1,104 @@
 <!doctype html><html lang="ru"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Igor FitZone — Admin</title>
-<link rel="stylesheet" href="theme-dark.css">
+<title>IgorFitZone — Admin</title>
+<link rel="stylesheet" href="../assets/admin-style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</head><body class="dark">
-<header class="admin-header">
-  <div class="brand"><div class="logo">IC</div><div><strong>Igor FitZone — Admin</strong><div class="sub">Привет, Игорь 👋 | тренер & нутрициолог</div></div></div>
-  <button id="backupBtn" class="btn">🪄 Создать резервную копию</button>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo">IgorFitZone</div>
+      <div class="tag small">Панель управления</div>
+    </div>
+    <div class="user">
+      <img src="../assets/admin-profile.jpg" alt="Игорь"/>
+      <a class="btn" id="openCMS">Открыть редактор</a>
+      <a class="btn" id="logoutBtn">Выйти</a>
+    </div>
+  </div>
 </header>
+
+<main class="container screen">
+  <section class="hero">
+    <span class="badge">👋 Привет, Игорь | тренер & нутрициолог</span>
+    <h1>Админ‑панель</h1>
+    <p class="hi">Управляй контентом, ценами, отзывами и SEO. Все изменения сохраняются в GitHub и автоматически публикуются на сайте.</p>
+    <div class="quick">
+      <a class="link small" href="#cards">Перейти к разделам ↓</a>
+      <a class="link small" href="#help">Справка</a>
+    </div>
+  </section>
+
+  <section id="cards" class="cards-enter grid">
+    <a class="card" href="#/collections/posts" onclick="openCmsAnd('/collections/posts');return false;">
+      <div class="icon"><img src="../assets/admin-icons/posts.svg" alt=""></div>
+      <h3>📝 Посты и советы</h3>
+      <p>Статьи, тексты, фото и видео.</p>
+    </a>
+
+    <a class="card" href="#/collections/gallery" onclick="openCmsAnd('/collections/gallery');return false;">
+      <div class="icon"><img src="../assets/admin-icons/gallery.svg" alt=""></div>
+      <h3>🏋️ Фото / видео галерея</h3>
+      <p>Добавляй фото с тренировок и видео.</p>
+    </a>
+
+    <a class="card" href="#/collections/reviews" onclick="openCmsAnd('/collections/reviews');return false;">
+      <div class="icon"><img src="../assets/admin-icons/reviews.svg" alt=""></div>
+      <h3>💬 Отзывы клиентов</h3>
+      <p>Модерация, публикация и правки.</p>
+    </a>
+
+    <a class="card" href="#/collections/pricing" onclick="openCmsAnd('/collections/pricing');return false;">
+      <div class="icon"><img src="../assets/admin-icons/pricing.svg" alt=""></div>
+      <h3>💰 Прайс и пакеты</h3>
+      <p>Цены, описания, PayPal.</p>
+    </a>
+
+    <a class="card" href="#/collections/partners" onclick="openCmsAnd('/collections/partners');return false;">
+      <div class="icon"><img src="../assets/admin-icons/links.svg" alt=""></div>
+      <h3>🔗 Партнёрские ссылки</h3>
+      <p>Баннеры, афиллиаты, переходы.</p>
+    </a>
+
+    <a class="card" href="#/collections/settings" onclick="openCmsAnd('/collections/settings');return false;">
+      <div class="icon"><img src="../assets/admin-icons/settings.svg" alt=""></div>
+      <h3>⚙️ SEO и настройки</h3>
+      <p>GA, ключевые слова, OG‑изображение.</p>
+    </a>
+  </section>
+
+  <section id="help" style="margin-top:22px">
+    <div class="card">
+      <h3>Справка</h3>
+      <ul class="small">
+        <li>Кнопка <b>«Открыть редактор»</b> запускает Netlify CMS. После входа все изменения сохраняются в GitHub.</li>
+        <li>Добавляй материалы, меняй цены, публикуй посты — сайт обновится автоматически.</li>
+        <li>Для доступа используется Netlify Identity. Приглашение придёт на e‑mail.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="container footer">© IgorFitZone 2025 — создано для Игоря Чуваева</footer>
+
 <script>
-document.getElementById('backupBtn').addEventListener('click', async()=>{
-  try{await fetch('https://hook.eu2.make.com/ia83okvtkus5ddgpuay3t772lvrn2dyk',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'backup-request', when:new Date().toISOString(), note:'manual-snapshot-from-admin'})});
-    alert('Запрошен snapshot-бэкап. Проверьте Make/Sheets.');
-  }catch(e){ alert('Не удалось отправить запрос на бэкап.'); }
-});
-CMS.init({ config: { load_config_file: true, path: 'config.yml' } });
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {});
+  }
+  function openCmsAnd(path){
+    CMS.init({ config: { load_config_file: true, path: 'config.yml' } });
+    if(path){
+      // move to collection inside CMS
+      setTimeout(()=>{ window.location.hash = path; }, 300);
+    }
+  }
+  document.getElementById('openCMS').addEventListener('click', () => openCmsAnd());
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    if (window.netlifyIdentity) window.netlifyIdentity.logout();
+  });
 </script>
 </body></html>
