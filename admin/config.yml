@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://igorfitzone.netlify.app
+logo_url: /assets/logo.png
+locale: ru
+
+collections:
+  - name: "posts"
+    label: "Посты и советы"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Фото", name: "image", widget: "image" }
+
+  - name: "gallery"
+    label: "Фото и видео галерея"
+    folder: "gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Изображение", name: "image", widget: "image" }
+
+  - name: "reviews"
+    label: "Отзывы клиентов"
+    folder: "reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Имя клиента", name: "name", widget: "string" }
+      - { label: "Текст отзыва", name: "text", widget: "text" }
+      - { label: "Фото клиента", name: "photo", widget: "image" }
+
+  - name: "pricing"
+    label: "Прайс и пакеты"
+    folder: "pricing"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название пакета", name: "title", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Цена", name: "price", widget: "number" }
+
+  - name: "partners"
+    label: "Партнёрские ссылки"
+    folder: "partners"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "name", widget: "string" }
+      - { label: "Ссылка", name: "url", widget: "string" }
+
+  - name: "seo"
+    label: "SEO и настройки"
+    folder: "settings"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Ключевые слова", name: "keywords", widget: "text" }
+      - { label: "Описание", name: "description", widget: "text" }
