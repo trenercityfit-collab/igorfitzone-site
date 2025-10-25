@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: trenercityfit-collab/igorfitzone-site
   branch: main
 
 media_folder: "assets/uploads"
