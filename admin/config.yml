@@ -1,15 +1,11 @@
-backend: 
-  name: github
-  repo: trenercityfit-collab/igorfitzone-site
+backend:
+  name: git-gateway
   branch: main
-
+  identity_url: https://igorfitzone.netlify.app/.netlify/identity
+  gateway_url: https://igorfitzone.netlify.app/.netlify/git
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
-
-site_url: https://igorfitzone.netlify.app
-logo_url: /assets/logo.png
-locale: ru
 
 collections:
   - name: "posts"
@@ -18,12 +14,12 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Название", name: "title", widget: "string" }
-      - { label: "Описание", name: "description", widget: "text" }
-      - { label: "Фото", name: "image", widget: "image" }
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Текст", name: "body", widget: "markdown" }
 
   - name: "gallery"
-    label: "Фото и видео галерея"
+    label: "Фото / видео галерея"
     folder: "gallery"
     create: true
     slug: "{{slug}}"
@@ -38,8 +34,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Имя клиента", name: "name", widget: "string" }
-      - { label: "Текст отзыва", name: "text", widget: "text" }
-      - { label: "Фото клиента", name: "photo", widget: "image" }
+      - { label: "Отзыв", name: "text", widget: "text" }
 
   - name: "pricing"
     label: "Прайс и пакеты"
@@ -47,24 +42,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Название пакета", name: "title", widget: "string" }
-      - { label: "Описание", name: "description", widget: "text" }
-      - { label: "Цена", name: "price", widget: "number" }
-
-  - name: "partners"
-    label: "Партнёрские ссылки"
-    folder: "partners"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Название", name: "name", widget: "string" }
-      - { label: "Ссылка", name: "url", widget: "string" }
-
-  - name: "seo"
-    label: "SEO и настройки"
-    folder: "settings"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ключевые слова", name: "keywords", widget: "text" }
-      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Пакет", name: "title", widget: "string" }
+      - { label: "Описание", name: "desc", widget: "text" }
+      - { label: "Цена", name: "price", widget: "string" }
