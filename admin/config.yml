@@ -3,9 +3,12 @@ backend:
   domain: igorfitzone.eu.auth0.com
   client_id: HbsyoUaehsFN4KP5nTyGb6JA4Ux0AJlC
   redirect_uri: https://igorfitzone.netlify.app/admin/
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
+
 
 collections:
   - name: "posts"
