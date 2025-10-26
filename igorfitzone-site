@@ -1,0 +1,295 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/admin$
+RewriteRule ^(.*)$ /admin/ [R=301,L]
+Options -Multiviews
+
+/admin    /admin/    301
+
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='icon' href='/assets/logo.png'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-KJNZSMGH2D'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJNZSMGH2D');
+  </script>
+  <meta name='keywords' content='фитнес тренер аршава, персональные тренировки, нутрициолог, снижение веса, набор массы, тренировки для мужчин, CityFit Warsaw'>
+  <meta property='og:title' content='горь уваев — фитнес-тренер, нутрициолог'>
+  <meta property='og:description' content='ерсональные тренировки в аршаве (CityFit) и онлайн. итание, нутрициология.'>
+  <meta property='og:image' content='https://igorfitzone.netlify.app/assets/logo.png'>
+  <meta property='og:type' content='website'>
+  <style>
+    :root{--bg:#0d0e11;--card:#13141a;--text:#e8e9ee;--muted:#a2a7b0;--brand:#E5B80B;--stroke:#242632;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;gap:16px}
+    header img{width:44px;height:44px;border-radius:8px}
+    nav{margin-left:auto;display:flex;gap:16px}
+    nav a{color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--text)}
+    .hero{margin:36px 0;padding:28px;border:1px solid var(--stroke);border-radius:20px;background:linear-gradient(180deg,rgba(229,184,11,0.08), transparent)}
+    .hero h1{margin:0 0 6px;font-size:32px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--brand);color:#000;text-decoration:none;font-weight:600}
+    footer{margin:40px 0;color:var(--muted);font-size:14px}
+  </style>
+  <title>лог — IgorFitZone</title>
+  <script type='module'>
+    import { renderBlogAll } from '/assets/js/blog.js';
+    window.addEventListener('DOMContentLoaded', ()=> renderBlogAll('#blog-list'));
+  </script>
+</head>
+<body>
+  <div class='wrap'>
+    <header>
+      <img src='/assets/logo.png' alt='logo'><strong>IgorFitZone</strong>
+      <nav>
+        <a href='/index.html'>лавная</a>
+        <a href='/gallery.html'>алерея</a>
+        <a href='/courses.html'>акеты</a>
+        <a href='/admin/'>дмин</a>
+      </nav>
+    </header>
+    <section class='hero'>
+      <h1>лог</h1>
+      <p>Советы по тренировкам, питанию, нутрициологии и мотивации.</p>
+    </section>
+    <div class='grid' id='blog-list'>
+      <div class='card'>агрузка…</div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!doctype html>
+<html lang='ру'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='icon' href='/assets/logo.png'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-KJNZSMGH2D'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJNZSMGH2D');
+  </script>
+  <meta name='keywords' content='фитнес тренер аршава, персональные тренировки, нутрициолог, снижение веса, набор массы, тренировки для мужчин, CityFit Warsaw'>
+  <meta property='og:title' content='горь уваев — фитнес-тренер, нутрициолог'>
+  <meta property='og:description' content='ерсональные тренировки в аршаве (CityFit) и онлайн. итание, нутрициология.'>
+  <meta property='og:image' content='https://igorfitzone.netlify.app/assets/logo.png'>
+  <meta property='og:type' content='website'>
+  <style>
+    :root{--bg:#0d0e11;--card:#13141a;--text:#e8e9ee;--muted:#a2a7b0;--brand:#E5B80B;--stroke:#242632;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;gap:16px}
+    header img{width:44px;height:44px;border-radius:8px}
+    nav{margin-left:auto;display:flex;gap:16px}
+    nav a{color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--text)}
+    .hero{margin:36px 0;padding:28px;border:1px solid var(--stroke);border-radius:20px;background:linear-gradient(180deg,rgba(229,184,11,0.08), transparent)}
+    .hero h1{margin:0 0 6px;font-size:32px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--brand);color:#000;text-decoration:none;font-weight:600}
+    footer{margin:40px 0;color:var(--muted);font-size:14px}
+  </style>
+  <title>акеты — IgorFitZone</title>
+</head>
+<body>
+  <div class='wrap'>
+    <header>
+      <img src='/assets/logo.png' alt='logo'><strong>IgorFitZone</strong>
+      <nav>
+        <a href='/index.html'>лавная</a>
+        <a href='/blog.html'>лог</a>
+        <a href='/gallery.html'>алерея</a>
+        <a href='/admin/'>дмин</a>
+      </nav>
+    </header>
+    <section class='hero'>
+      <h1>акеты и цены</h1>
+      <p>едактируй через админку (коллекция «райс и пакеты»).</p>
+    </section>
+    <div class='grid'>
+      <div class='card'><strong>1 занятие</strong><p>ндивидуальная тренировка</p><div class='btn'>149 PLN</div></div>
+      <div class='card'><strong>акет 8</strong><p>8 тренировок</p><div class='btn'>949 PLN</div></div>
+      <div class='card'><strong>акет 12</strong><p>12 тренировок</p><div class='btn'>1319 PLN</div></div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!doctype html>
+<html lang='ру'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='icon' href='/assets/logo.png'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-KJNZSMGH2D'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJNZSMGH2D');
+  </script>
+  <meta name='keywords' content='фитнес тренер аршава, персональные тренировки, нутрициолог, снижение веса, набор массы, тренировки для мужчин, CityFit Warsaw'>
+  <meta property='og:title' content='горь уваев — фитнес-тренер, нутрициолог'>
+  <meta property='og:description' content='ерсональные тренировки в аршаве (CityFit) и онлайн. итание, нутрициология.'>
+  <meta property='og:image' content='https://igorfitzone.netlify.app/assets/logo.png'>
+  <meta property='og:type' content='website'>
+  <style>
+    :root{--bg:#0d0e11;--card:#13141a;--text:#e8e9ee;--muted:#a2a7b0;--brand:#E5B80B;--stroke:#242632;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;gap:16px}
+    header img{width:44px;height:44px;border-radius:8px}
+    nav{margin-left:auto;display:flex;gap:16px}
+    nav a{color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--text)}
+    .hero{margin:36px 0;padding:28px;border:1px solid var(--stroke);border-radius:20px;background:linear-gradient(180deg,rgba(229,184,11,0.08), transparent)}
+    .hero h1{margin:0 0 6px;font-size:32px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--brand);color:#000;text-decoration:none;font-weight:600}
+    footer{margin:40px 0;color:var(--muted);font-size:14px}
+  </style>
+  <title>алерея — IgorFitZone</title>
+  <script type='module'>
+    import { renderGallery } from '/assets/js/gallery.js';
+    window.addEventListener('DOMContentLoaded', ()=> renderGallery('#gallery-list'));
+  </script>
+</head>
+<body>
+  <div class='wrap'>
+    <header>
+      <img src='/assets/logo.png' alt='logo'><strong>IgorFitZone</strong>
+      <nav>
+        <a href='/index.html'>лавная</a>
+        <a href='/blog.html'>лог</a>
+        <a href='/courses.html'>акеты</a>
+        <a href='/admin/'>дмин</a>
+      </nav>
+    </header>
+    <section class='hero'>
+      <h1>алерея</h1>
+      <p>ото с тренировок, трансформации клиентов, мероприятия. идео — через YouTube ссылку.</p>
+    </section>
+    <div class='grid' id='gallery-list'>
+      <div class='card'>агрузка…</div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='icon' href='/assets/logo.png'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap' rel='stylesheet'>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-KJNZSMGH2D'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJNZSMGH2D');
+  </script>
+  <meta name='keywords' content='фитнес тренер аршава, персональные тренировки, нутрициолог, снижение веса, набор массы, тренировки для мужчин, CityFit Warsaw'>
+  <meta property='og:title' content='горь уваев — фитнес-тренер, нутрициолог'>
+  <meta property='og:description' content='ерсональные тренировки в аршаве (CityFit) и онлайн. итание, нутрициология.'>
+  <meta property='og:image' content='https://igorfitzone.netlify.app/assets/logo.png'>
+  <meta property='og:type' content='website'>
+  <style>
+    :root{--bg:#0d0e11;--card:#13141a;--text:#e8e9ee;--muted:#a2a7b0;--brand:#E5B80B;--stroke:#242632;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;gap:16px}
+    header img{width:44px;height:44px;border-radius:8px}
+    nav{margin-left:auto;display:flex;gap:16px}
+    nav a{color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--text)}
+    .hero{margin:36px 0;padding:28px;border:1px solid var(--stroke);border-radius:20px;background:linear-gradient(180deg,rgba(229,184,11,0.08), transparent)}
+    .hero h1{margin:0 0 6px;font-size:32px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--brand);color:#000;text-decoration:none;font-weight:600}
+    footer{margin:40px 0;color:var(--muted);font-size:14px}
+  </style>
+  <title>IgorFitZone — фитнес-тренер и нутрициолог</title>
+  <script type='module'>
+    import { renderLatestPosts } from '/assets/js/blog.js';
+    window.addEventListener('DOMContentLoaded', ()=> renderLatestPosts('#latest-posts', 3));
+  </script>
+</head>
+<body>
+  <div class='wrap'>
+    <header>
+      <img src='/assets/logo.png' alt='logo'>
+      <strong>IgorFitZone</strong>
+      <nav>
+        <a href='/blog.html'>лог</a>
+        <a href='/gallery.html'>алерея</a>
+        <a href='/courses.html'>акеты</a>
+        <a href='/admin/'>дмин</a>
+      </nav>
+    </header>
+    <section class='hero'>
+      <h1>горь уваев — фитнес-тренер, нутрициолог</h1>
+      <p>аршава · сеть клубов CityFit — тренировки в зале и онлайн.</p>
+      <div style='display:flex;gap:12px;flex-wrap:wrap'>
+        <a class='btn' href='https://calendar.app.google/qjBcQd43Y5tbcjqeA' target='_blank'>аписаться</a>
+        <a class='btn' href='https://wa.me/48730508229' target='_blank'>WhatsApp</a>
+        <a class='btn' href='https://t.me/igorfitzone' target='_blank'>Telegram</a>
+      </div>
+    </section>
+    <section>
+      <h3>📰 оследние посты</h3>
+      <div class='grid' id='latest-posts'>
+        <div class='card'>агрузка постов…</div>
+      </div>
+      <div style='margin-top:16px'><a class='btn' href='/blog.html'>Смотреть все</a></div>
+    </section>
+    <footer>© 2025 IgorFitZone • <a href='/admin/'>дмин-панель</a></footer>
+  </div>
+</body>
+</html>
+
+[build]
+  publish = "."
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+
+# IgorFitZone v2 — сайт + Admin (Decap CMS)
+
+## то реализовано
+- лавная: «оследние посты» (3 последних).
+- лог: markdown → HTML с модалками (fade + slide).
+- алерея: фото/видео + лайтбокс.
+- CMS: /admin (GitHub backend).
+- SEO/OG/GA4 включены.
+- отово для Netlify/Hostinger.
+
+## убликация
+GitHub → Netlify (Publish directory: .), админка по адресу /admin.
